@@ -74,6 +74,32 @@ def readInput():
         return Response(e.message, status=400, mimetype='text/plain')
 
 # Patch
+@app.route("/v1/<type>/<id>/jsonvalput",methods=["PUT"])
+def readPutInput(type,id):
+    content = request.json
+    schema = json.load(open('../json_schema.json'))
+    # Mark status code based on the status of validation
+    try:
+
+        validate(instance=content, schema=schema)
+
+        # Extract ObjectId, ObjectType and generate key
+        key_prefix = type+'_'+id
+
+        for key in content.keys():
+            r.set(key_prefix+'..'+key,json.dumps(content[key]))
+
+        # response = Response(json.dumps({'Message': 'Valid object found, stored in redis', 'redis-key': key, 'objectId': content['objectId'],'objectType': content['objectType']}), status=200, mimetype='application/json')
+        response = Response(json.dumps(content), status=200, mimetype='application/json')
+        response.add_etag()
+        # print(response.get_etag())
+
+        return response
+
+    except Exception as e:
+        return Response(e.message, status=400, mimetype='text/plain')
+
+# Patch
 @app.route("/v1/<type>/<id>/jsonvalpatch",methods=["PATCH"])
 def readPatchInput(type,id):
     content = request.json
