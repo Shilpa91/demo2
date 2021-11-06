@@ -30,7 +30,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n\t\"planCostShares\": {\r\n\t\t\"deductible\": 2000,\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"copay\": -23,\r\n\t\t\"objectId\": \"1234vxc2324sdf-501\",\r\n\t\t\"objectType\": \"membercostshare\"\r\n\t\t\r\n\t},\r\n\t\"linkedPlanServices\": [{\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30asdf-502\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"Yearly physical\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 0,\r\n\t\t\t\"objectId\": \"1234512xvc1314asdfs-503\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"objectId\": \"27283xvx9asdff-504\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}, {\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30sfs-505\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"well baby\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 175,\r\n\t\t\t\"objectId\": \"1234512xvc1314sdfsd-506\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\r\n\t\t\"objectId\": \"27283xvx9sdf-507\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}],\r\n\r\n\r\n\t\"_org\": \"example.com\",\r\n\t\"objectId\": \"12xvxc345ssdsds-508\",\r\n\t\"objectType\": \"plan\",\r\n\t\"planType\": \"inNetwork\",\r\n\t\"creationDate\": \"12-12-2017\"\r\n}",
+					"raw": "{\r\n\r\n\t\"planCostShares\": {\r\n\t\t\"deductible\": 2000,\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"copay\": 23,\r\n\t\t\"objectId\": \"1234vxc2324sdf-501\",\r\n\t\t\"objectType\": \"membercostshare\"\r\n\t\t\r\n\t},\r\n\t\"linkedPlanServices\": [{\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30asdf-502\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"Yearly physical\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 0,\r\n\t\t\t\"objectId\": \"1234512xvc1314asdfs-503\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"objectId\": \"27283xvx9asdff-504\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}, {\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30sfs-505\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"well baby\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 175,\r\n\t\t\t\"objectId\": \"1234512xvc1314sdfsd-506\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\r\n\t\t\"objectId\": \"27283xvx9sdf-507\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}],\r\n\r\n\r\n\t\"_org\": \"example.com\",\r\n\t\"objectId\": \"12xvxc345ssdsds-508\",\r\n\t\"objectType\": \"plan\",\r\n\t\"planType\": \"inNetwork\",\r\n\t\"creationDate\": \"12-12-2017\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -114,10 +114,9 @@
 				"method": "PATCH",
 				"header": [
 					{
-						"key": "If-None-Match",
-						"type": "text",
-						"value": "61c9ebb6de9cd55e12b2a577795b2cb2",
-						"disabled": true
+						"key": "If-Match",
+						"value": "b88536308c66b23747438978d572a44c",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -130,7 +129,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/v1/plan/12xvxc345ssdsds-508/jsonvalpatch",
+					"raw": "localhost:8080/v1/plan/12xvxc345ssdsds-508",
 					"host": [
 						"localhost"
 					],
@@ -138,8 +137,53 @@
 					"path": [
 						"v1",
 						"plan",
-						"12xvxc345ssdsds-508",
-						"jsonvalpatch"
+						"12xvxc345ssdsds-508"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "If-Match",
+						"value": "f8870f8d189c357c89c21d2e75fa8481",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\t\"planCostShares\": {\r\n\t\t\"deductible\": 2000,\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"copay\": 23,\r\n\t\t\"objectId\": \"1234vxc2324sdf-501\",\r\n\t\t\"objectType\": \"membercostshare\"\r\n\t\t\r\n\t},\r\n\t\"linkedPlanServices\": [{\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30asdf-502\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"Yearly physical\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 0,\r\n\t\t\t\"objectId\": \"1234512xvc1314asdfs-503\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\"objectId\": \"27283xvx9asdff-504\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}, {\r\n\t\t\"linkedService\": {\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"objectId\": \"1234520xvc30sfs-505\",\r\n\t\t\t\"objectType\": \"service\",\r\n\t\t\t\"name\": \"well baby\"\r\n\t\t},\r\n\t\t\"planserviceCostShares\": {\r\n\t\t\t\"deductible\": 10,\r\n\t\t\t\"_org\": \"example.com\",\r\n\t\t\t\"copay\": 175,\r\n\t\t\t\"objectId\": \"1234512xvc1314sdfsd-506\",\r\n\t\t\t\"objectType\": \"membercostshare\"\r\n\t\t},\r\n\t\t\r\n\t\t\"_org\": \"example.com\",\r\n\t\t\r\n\t\t\"objectId\": \"27283xvx9sdf-507\",\r\n\t\t\"objectType\": \"planservice\"\r\n\t}],\r\n\r\n\r\n\t\"_org\": \"example.com\",\r\n\t\"objectId\": \"12xvxc345ssdsds-508\",\r\n\t\"objectType\": \"plan\",\r\n\t\"planType\": \"inNetwork\",\r\n\t\"creationDate\": \"12-12-2017\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/plan/12xvxc345ssdsds-508",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"plan",
+						"12xvxc345ssdsds-508"
 					]
 				}
 			},
@@ -167,7 +211,7 @@
 					{
 						"key": "If-None-Match",
 						"type": "text",
-						"value": "61c9ebb6de9cd55e12b2a577795b2cb2"
+						"value": "b88536308c66b23747438978d572a44c"
 					}
 				],
 				"body": {
